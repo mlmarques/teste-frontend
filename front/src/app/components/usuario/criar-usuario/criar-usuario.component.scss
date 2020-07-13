@@ -1,0 +1,75 @@
+$label-cadastro: #cccccc;
+$input-cadastro: #cccccc;
+$input-foco: #333333;
+$input-invalido: #eb4a46;
+
+.formulario-container{
+    width: 80%;
+    margin: auto;
+
+    & .titulo-formulario{
+        font-size: 32px;
+        color: $label-cadastro;
+        font-weight: bold;
+        padding-top: 12px;
+    }
+
+    & .linha-formulario{
+        display: block;
+        float: left;
+        box-sizing: border-box;
+        margin-top: 18px;
+        width: 100%;
+
+        &.botao{
+            margin-top: 52px;
+        }
+    }
+}
+
+.label-cadastro{
+    box-sizing: border-box;
+    display:inline-block;
+    width: 100%;
+    font-size: 16px;
+    color: $label-cadastro; 
+}
+
+.input-cadastro{
+    box-sizing: border-box;
+    display:inline-block;
+    width: 100%;
+    padding: 8px 0;
+    color: $input-cadastro;
+    font-size: 20px;
+    border-bottom: 2px solid $input-cadastro;
+
+    &:focus{
+        color: $input-foco;
+        border-bottom: 2px solid $input-foco;
+    }
+
+    &.invalido{
+        color: $input-invalido;
+        border-bottom: 2px solid $input-invalido;
+    }
+}
+
+.botao-cadastrar{
+    box-sizing: border-box;
+    width: 100%;
+    height: 62px;
+    border-radius: 32px;
+    color: #FFFFFF;
+    background-color: #00c8b3;
+    font-size: 26px;
+
+    &:hover{
+        opacity: 70%;
+    }
+
+    &:disabled{
+        color: #dddcdc;
+        background-color: #f6f6f6;
+    }
+}
