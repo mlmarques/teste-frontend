@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@import './normalize.scss';
+
+.input{
+    color: #efeeed;
+    border-bottom: 1px solid #efeeed;
+
+    &:focus{
+        color: #333333;
+    }
+}
