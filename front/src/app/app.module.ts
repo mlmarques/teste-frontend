@@ -15,7 +15,8 @@ import { CriarUsuarioComponent } from './components/usuario/criar-usuario/criar-
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

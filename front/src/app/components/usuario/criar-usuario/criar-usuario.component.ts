@@ -11,11 +11,18 @@ import { UsuarioService } from './../usuario.service'
 export class CriarUsuarioComponent implements OnInit {
 
   usuario: Usuario = {
-    cpf: 46970120899,
-    name: 'Matheus Marques Luiz',
-    phone: 13991977273,
-    email: 'marquesluiz.matheus@gmail.com',
+    cpf: null,
+    name: '',
+    phone: null,
+    email: '',
   }
+
+  // usuario: Usuario = {
+  //   cpf: 46970120899,
+  //   name: 'Matheus Marques Luiz',
+  //   phone: 13991977273,
+  //   email: 'marquesluiz.matheus@gmail.com',
+  // }
 
   constructor(private usuarioService: UsuarioService) { }
 
