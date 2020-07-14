@@ -2,19 +2,23 @@
     <h2 class="titulo-formulario">Cadastrar Usuário</h2>
     <div class="linha-formulario">
         <label for="nome" class="label-cadastro">Nome completo (sem abreviações)</label>
-        <input type="text" id="nome" name="nome" class="input-cadastro"/>    
+        <!-- <input type="text" id="nome" name="nome" class="input-cadastro"/>     -->
+        <input type="text" [(ngModel)]="usuario.name" name="nome" class="input-cadastro"/>    
     </div>
     <div class="linha-formulario">
         <label for="email" class="label-cadastro">E-mail</label>
-        <input type="text" id="email" name="email" class="input-cadastro"/>    
+        <!-- <input type="text" id="email" name="email" class="input-cadastro"/>    -->
+        <input type="text" [(ngModel)]="usuario.email" name="email" class="input-cadastro"/>     
     </div>
     <div class="linha-formulario">
         <label for="cpf" class="label-cadastro">CPF</label>
-        <input type="text" id="cpf" name="cpf" class="input-cadastro"/>    
+        <!-- <input type="text" id="cpf" name="cpf" class="input-cadastro"/>     -->
+        <input type="text" [(ngModel)]="usuario.cpf" name="cpf" class="input-cadastro"/>    
     </div>
     <div class="linha-formulario">
         <label for="telefone" class="label-cadastro">Telefone</label>
-        <input type="text" id="telefone" name="telefone" class="input-cadastro"/>    
+        <!-- <input type="text" id="telefone" name="telefone" class="input-cadastro"/>     -->
+        <input type="text" [(ngModel)]="usuario.phone" name="telefone" class="input-cadastro"/>    
     </div>
     <div class="linha-formulario botao">
         <button (click)="cadastrarUsuario()" class="botao-cadastrar">
