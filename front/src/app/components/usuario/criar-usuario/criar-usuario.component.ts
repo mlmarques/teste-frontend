@@ -23,7 +23,7 @@ export class CriarUsuarioComponent implements OnInit {
   }
 
   cadastrarUsuario(): void {
-    this.usuarioService.criarUsuario(this.usuario)
+    this.usuarioService.createUsuario(this.usuario);
   }
 
 }

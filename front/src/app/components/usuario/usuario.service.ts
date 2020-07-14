@@ -15,10 +15,6 @@ export class UsuarioService {
 
   constructor(private http: HttpClient) {}  
 
-  criarUsuario(usuario: Usuario): void{
-    console.log(usuario);
-  }
-
   buscarUsuarios(): any {
   }
 
@@ -41,11 +37,16 @@ export class UsuarioService {
   }
 
   createUsuario(usuario: Usuario): void{
-    this.getListaUsuarios().push(usuario);
+    let novaLista = this.getListaUsuarios();
+    novaLista.push(usuario);
+    this.limparStorage();
+    this.criarStorage(novaLista);
   }
   
   deleteUsuario(cpf: number): void{
-    let novaLista = this.getListaUsuarios().splice(1, this.getListaUsuarios().map(el => {return el.cpf}).indexOf(cpf));
+    let index = this.getListaUsuarios().map(el => {return el.cpf}).indexOf(cpf);
+    let novaLista = this.getListaUsuarios();
+    novaLista.splice(index, 1);
     this.limparStorage();
     this.criarStorage(novaLista);
   }
