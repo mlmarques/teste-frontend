@@ -12,6 +12,10 @@ const routes: Routes = [
   {
     path: 'usuario/listar',
     component: ListarUsuarioComponent
+  },
+  {
+    path: '',
+    component: ListarUsuarioComponent
   }
 ];
 
