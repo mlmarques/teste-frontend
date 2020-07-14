@@ -17,13 +17,6 @@ export class CriarUsuarioComponent implements OnInit {
     email: '',
   }
 
-  // usuario: Usuario = {
-  //   cpf: 46970120899,
-  //   name: 'Matheus Marques Luiz',
-  //   phone: 13991977273,
-  //   email: 'marquesluiz.matheus@gmail.com',
-  // }
-
   constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
