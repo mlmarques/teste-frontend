@@ -6,11 +6,13 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CriarUsuarioComponent } from './components/usuario/criar-usuario/criar-usuario.component';
+import { ListarUsuarioComponent } from './components/usuario/listar-usuario/listar-usuario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CriarUsuarioComponent
+    CriarUsuarioComponent,
+    ListarUsuarioComponent
   ],
   imports: [
     BrowserModule,

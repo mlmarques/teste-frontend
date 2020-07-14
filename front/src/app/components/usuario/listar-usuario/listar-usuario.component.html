@@ -1,1 +1,17 @@
-<p>listar-usuario works!</p>
+<table class="tabela-container">
+    <h2 class="titulo-tabela">Listar usuários</h2>
+    <tr class="linha-tabela">
+        <th class="campo-tabela cabecalho">Nome completo</th>
+        <th class="campo-tabela cabecalho">E-mail</th>
+        <th class="campo-tabela cabecalho">CPF</th>
+        <th class="campo-tabela cabecalho">Telefone</th>
+        <th class="campo-tabela cabecalho"></th>
+    </tr>
+    <tr *ngFor="let usuario of usuarios" class="linha-tabela">
+        <td class="campo-tabela">{{ usuario.name }}</td>
+        <td class="campo-tabela">{{ usuario.email }}</td>
+        <td class="campo-tabela">{{ usuario.cpf }}</td>
+        <td class="campo-tabela">{{ usuario.phone }}</td>
+        <td class="campo-tabela"> <span class="acao editar">editar</span> | <span class="acao excluir">excluir</span></td>
+    </tr>
+</table>
