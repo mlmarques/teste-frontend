@@ -16,6 +16,10 @@ export class UsuarioService {
   constructor(private http: HttpClient) {}  
 
   buscarUsuarios(): any {
+    if(this.getListaUsuarios() === null || this.getListaUsuarios().length < 1){
+      this.limparStorage();
+      this.setDadosIniciar();
+    }
   }
 
   consumirDadosIniciais(): Observable<Usuario[]>{

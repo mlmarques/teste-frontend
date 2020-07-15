@@ -15,14 +15,8 @@ export class ListarUsuarioComponent implements OnInit {
   constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
-    // this.usuarioService.consumirDadosIniciais().subscribe(usuarios => {
-    //   this.usuarios = usuarios;
-    // })
-
-    // -----------------------------------------------------------------
-    this.usuarioService.setDadosIniciar();
-    this.usuarios = this.usuarioService.getListaUsuarios();
-    console.log(this.usuarioService.getUsuarioPorCpf(this.usuarios[0].cpf));
+    this.usuarioService.buscarUsuarios();
+    this.atualizarDados();
   }
 
   editarUsuario(cpf: number): void{
