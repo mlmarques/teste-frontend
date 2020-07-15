@@ -1,15 +1,14 @@
-$label-cadastro: #333333;
+$label-cadastro: #c4c4c4;
 $input-cadastro: #333333;
+$input-borda: #333333;
 $input-foco: #333333;
 $input-invalido: #eb4a46;
 
 .formulario-container{
-    width: 80%;
-    margin: auto;
 
     & .titulo-formulario{
         font-size: 32px;
-        color: $label-cadastro;
+        color: $input-foco;
         font-weight: bold;
         padding-top: 12px;
     }
@@ -31,11 +30,11 @@ $input-invalido: #eb4a46;
         margin-top: 12px;
         font-size: 14px;
         font-weight: bold;
-        color: $label-cadastro;
+        color: $input-foco;
         cursor: pointer;
 
         &:hover{
-            border-bottom: 2px solid $label-cadastro;
+            border-bottom: 2px solid $input-foco;
         }
     }
 }
@@ -55,7 +54,7 @@ $input-invalido: #eb4a46;
     padding: 8px 0;
     color: $input-cadastro;
     font-size: 20px;
-    border-bottom: 2px solid $input-cadastro;
+    border-bottom: 2px solid $input-borda;
 
     &:focus{
         color: $input-foco;
@@ -84,5 +83,34 @@ $input-invalido: #eb4a46;
     &:disabled{
         color: #dddcdc;
         background-color: #f6f6f6;
+    }
+}
+
+
+@media only screen and (min-width: 768px){
+    .formulario-container{
+        width: 40%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .formulario-container{
+        width: 60%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .formulario-container{
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 321px){
+    .formulario-container{
+        width: 90%;
+        margin: auto;
     }
 }
