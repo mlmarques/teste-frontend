@@ -20,6 +20,10 @@ export class ListarUsuarioComponent implements OnInit {
     this.atualizarDados();
   }
 
+  adicionarUsuario(){
+    this.router.navigate([`usuario/criar`]);
+  }
+
   editarUsuario(cpf: number): void{
     this.router.navigate([`usuario/criar/${cpf}`]);
   }

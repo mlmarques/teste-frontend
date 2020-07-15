@@ -31,6 +31,10 @@ export class CriarUsuarioComponent implements OnInit {
     }
   }
 
+  cancelar(){
+    this.router.navigate([`usuario/listar`]);
+  }
+
   finalizar(): void {
     let cpfSelecionado = this.route.snapshot.paramMap.get('cpf');
     if(cpfSelecionado !== null){

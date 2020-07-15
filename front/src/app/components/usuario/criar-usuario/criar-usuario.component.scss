@@ -1,5 +1,5 @@
-$label-cadastro: #cccccc;
-$input-cadastro: #cccccc;
+$label-cadastro: #333333;
+$input-cadastro: #333333;
 $input-foco: #333333;
 $input-invalido: #eb4a46;
 
@@ -23,6 +23,19 @@ $input-invalido: #eb4a46;
 
         &.botao{
             margin-top: 52px;
+        }
+    }
+
+    & .label-cancelar{
+        display: inline-block;
+        margin-top: 12px;
+        font-size: 14px;
+        font-weight: bold;
+        color: $label-cadastro;
+        cursor: pointer;
+
+        &:hover{
+            border-bottom: 2px solid $label-cadastro;
         }
     }
 }

@@ -3,8 +3,12 @@ $tabela-borda: #dddcdc;
 $tabela-cabecalho: #333333;
 $tabela-campo: #424242;
 $tabela-excluir: #eb4a46;
+$tabela-adicionar: #1492E6;
 
 .tabela-container{
+    width: 80%;
+    margin: auto;
+
     & .titulo-tabela{
         font-size: 32px;
         color: $tabela-cabecalho;
@@ -12,8 +16,12 @@ $tabela-excluir: #eb4a46;
         padding: 12px;
     }
 
-    width: 80%;
-    margin: auto;
+    & .label-adicionar{
+        font-size: 12px;
+        color: $tabela-adicionar;
+        padding: 12px;
+        cursor: pointer;
+    }
 
     & .linha-tabela{
         box-sizing: border-box;
