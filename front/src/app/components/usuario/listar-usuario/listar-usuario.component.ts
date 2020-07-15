@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'; 
 
 import { Usuario } from './../usuario.model';
 import { UsuarioService } from './../usuario.service'
@@ -12,7 +13,7 @@ export class ListarUsuarioComponent implements OnInit {
 
   usuarios: Usuario[];
 
-  constructor(private usuarioService: UsuarioService) { }
+  constructor(private router: Router, private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
     this.usuarioService.buscarUsuarios();
@@ -20,7 +21,7 @@ export class ListarUsuarioComponent implements OnInit {
   }
 
   editarUsuario(cpf: number): void{
-    console.log(this.usuarioService.getUsuarioPorCpf(cpf));
+    this.router.navigate([`usuario/criar/${cpf}`]);
   }
 
   excluirUsuario(cpf: number): void{

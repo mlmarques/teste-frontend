@@ -37,7 +37,7 @@ export class UsuarioService {
   }
 
   getUsuarioPorCpf(cpf: number): any{
-    return this.getListaUsuarios().find(el => el.cpf === cpf);
+    return this.getListaUsuarios().find(el => parseInt(el.cpf) === cpf);
   }
 
   createUsuario(usuario: Usuario): void{
@@ -47,6 +47,14 @@ export class UsuarioService {
     this.criarStorage(novaLista);
   }
   
+  updateUsuario(usuario: Usuario): void{
+    let novaLista = this.getListaUsuarios();
+    let index = this.getListaUsuarios().map(el => {return el.cpf}).indexOf(usuario.cpf);
+    novaLista[index] = usuario;
+    this.limparStorage();
+    this.criarStorage(novaLista);
+  }
+
   deleteUsuario(cpf: number): void{
     let index = this.getListaUsuarios().map(el => {return el.cpf}).indexOf(cpf);
     let novaLista = this.getListaUsuarios();

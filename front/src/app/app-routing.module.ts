@@ -10,6 +10,10 @@ const routes: Routes = [
     component: CriarUsuarioComponent
   },
   {
+    path: 'usuario/criar/:cpf',
+    component: CriarUsuarioComponent
+  },
+  {
     path: 'usuario/listar',
     component: ListarUsuarioComponent
   },
